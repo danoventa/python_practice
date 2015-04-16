@@ -1,0 +1,11 @@
+red color
+apple red roundish fruit # Apples are really tasty
+onion yellow roundish vegetable
+long shape
+shape .
+banana yellow long fruit
+yellow color
+roundish color
+roundish shape
+fruit food-type
+food-type .
