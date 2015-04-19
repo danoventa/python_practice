@@ -11,7 +11,7 @@ def parse_file():
 			if file.endswith(".txt"):
 				f = open(file, 'r')
         		content = f.read()
-        		parse_words(f.read())
+        		parse_words(content)
 
 def parse_words(readFile):
 	primatives = [];
