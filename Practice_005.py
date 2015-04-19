@@ -12,8 +12,38 @@ import statistics as s
 import exampleModule
 exList = [2, 2, 4, 5, 6, 2, 4, 6, 7, 3]
 
-# mutable can be changed (list)
-# immutable cannot be changed (tuple)
+gradeDict = {'Kelly':90, 'David':65, 'Jack':95, 'Samantha':95}
+
+print (gradeDict)
+print(gradeDict['David'])
+gradeDict['David'] = 45
+print(gradeDict['David'])
+
+gradeDict['Jessey'] = 92
+del gradeDict['David']
+print (gradeDict)
+
+gradeDict = {'Kelly':[90, 95], 'Jack':[95, 99], 'Samantha':[95, 94], 'Jessey':[92, 93]}
+print(gradeDict['Jessey'])
+print(gradeDict['Jessey'][0])
+
+
+# mutable can be changed (list)  - []
+# immutable cannot be changed (tuple)   - ()
+
+x = [2, 3, 5, 2, 5, 6, 7]
+print (x)
+print (x[4])
+x.append(12)
+print (x)
+x.insert(5, 7)
+print (x)
+x.remove(7)
+print(x)
+print((x.index(2)))
+print(x.count(3))
+x.sort()
+print(x)
 
 def example():
 	return 15, 19
@@ -21,7 +51,7 @@ def example():
 a, b = example()
 
 print (a)
-print(b)
+print (b)
 
 
 exampleModule.exampleFunc('yay it worked!')
