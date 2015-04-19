@@ -10,8 +10,7 @@ def example2():
 def example3():
 	z = 7
 	print(z)
-	
-	y = x + 1
+	y = g + 1
 	print(y)
 
 def website(font, background_color, font_size, font_color):
@@ -39,6 +38,8 @@ def example():
 		print(x, 'is less than', y)
 
 example ()
+example2()
+example3()
 website('black', 'tnr', 'white', '11')
 website(font_color='black', font='tnr', background_color='white', font_size='11')
 website2()
