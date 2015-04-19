@@ -1,3 +1,19 @@
+g = 6
+
+def example2():
+	z = 5
+	print(z)
+	
+# cannot do this
+# print(z)
+
+def example3():
+	z = 7
+	print(z)
+	
+	y = x + 1
+	print(y)
+
 def website(font, background_color, font_size, font_color):
 	print('font:', font)
 	print('bg:', background_color)
