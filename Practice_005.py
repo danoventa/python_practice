@@ -27,7 +27,6 @@ gradeDict = {'Kelly':[90, 95], 'Jack':[95, 99], 'Samantha':[95, 94], 'Jessey':[9
 print(gradeDict['Jessey'])
 print(gradeDict['Jessey'][0])
 
-
 # mutable can be changed (list)  - []
 # immutable cannot be changed (tuple)   - ()
 
