@@ -9,16 +9,16 @@ def parse_file():
 	for root, dirs, files in os.walk("."):
 		for file in files:
 			if file.endswith(".txt"):
-				f = open(file, 'r')
-        		content = f.readlines()
-        		print(content)
-        		parse_words(content)
+				fi = open(file, 'r').read()
+				content2 = fi.split('\n')
+				print(content2)
+				
 
 def parse_words(readFile):
 	primatives = [];
 	undefinedWords = [];
 	line = ""
-	for lines in readFile.readlines():
+	for lines in readFile.splitlines():
 		print(lines)		
 		for word in lines.split(' '):
 			yield word
