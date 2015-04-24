@@ -10,7 +10,8 @@ def parse_file():
 		for file in files:
 			if file.endswith(".txt"):
 				f = open(file, 'r')
-        		content = f.read()
+        		content = f.readlines()
+        		print(content)
         		parse_words(content)
 
 def parse_words(readFile):
