@@ -12,6 +12,10 @@ def parse_file():
 				fi = open(file, 'r').read()
 				content2 = fi.split('\n')
 				print(content2)
+				for line in content2:
+					print(line)
+					if line == ".":
+						print("is definition")
 				
 
 def parse_words(readFile):
