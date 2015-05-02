@@ -15,7 +15,7 @@ def parse_file():
 				for line in content2:
 					print(line)
 					if line == ".":
-						print("is definition")
+						print('is definition')
 				
 
 def parse_words(readFile):
