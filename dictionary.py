@@ -32,7 +32,10 @@ def parse_file():
 						to_defined(toBeDefined)
 						print('undefined')
 				print ("finished the line loop")
-
+				while toBeDefined:
+					print (toBeDefined)
+					print ("Has Been Defined")
+					print(toBeDefined.pop())
 		
 def main(): 
 	parse_file()
