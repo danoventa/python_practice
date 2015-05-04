@@ -4,11 +4,14 @@ import os
 
 DIR = "./tmp/collat_test/"
 
-def to_defined(toBeDefined):
-	print(toBeDefined)
-	
-def already_defined(defined):
-	print(defined)
+def find_definition(undefined, defined):
+	while undefined:
+		temp = undefined.pop()
+		if temp in defined:
+			defined.append(temp)
+		print ("Has Been Defined: " + temp)
+		print(defined)
+		
 
 def parse_file():
 	os.chdir(DIR)
@@ -23,20 +26,14 @@ def parse_file():
 				for line in content2:
 					print(line)
 					if "." in line:
-						line.split(" ")
-						defined.append(line[0])
-						already_defined(defined)
+						defined.append(line.split(" ")[0])
 						print('is definition')
 					else:
 						toBeDefined.append(line)
-						to_defined(toBeDefined)
 						print('undefined')
 				print ("finished the line loop")
-				while toBeDefined:
-					print (toBeDefined)
-					print ("Has Been Defined")
-					print(toBeDefined.pop())
-		
+				find_definition(toBeDefined, defined)
+
 def main(): 
 	parse_file()
 	pass     		
