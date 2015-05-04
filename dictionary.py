@@ -7,8 +7,9 @@ DIR = "./tmp/collat_test/"
 def find_definition(undefined, defined):
 	while undefined:
 		temp = undefined.pop()
-		if temp in defined:
-			defined.append(temp)
+		if  len(temp.split(" ")) > 1:
+			if temp.split(" ")[1] in defined:
+				defined.append(temp.split(" ")[0])
 		print ("Has Been Defined: " + temp)
 		print(defined)
 		
