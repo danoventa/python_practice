@@ -12,6 +12,9 @@ def find_definition(undefined, defined):
 				defined.append(temp.split(" ")[0])
 		print ("Has Been Defined: " + temp)
 		print(defined)
+	definedString = ''
+	for word in defined:
+		print(word)
 		
 
 def parse_file():
