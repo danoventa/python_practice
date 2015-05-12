@@ -8,15 +8,18 @@ def find_definition(undefined, defined):
 	while undefined:
 		temp = undefined.pop()
 		if  len(temp.split(" ")) > 1:
-			if temp.split(" ")[1] in defined:
-				defined.append(temp.split(" ")[0])
-		print ("Has Been Defined: " + temp)
+			tempList = temp.split(" ")
+			print("THIS IS TEMP LIST:")
+			print(tempList)
+			for word in tempList: ''' of line '''
+				if word in defined: ''' then the words are defined.'''
+					defined.append(word)
+		print ("Has Been Defined: " + temp )
 		print(defined)
 	definedString = ''
 	for word in defined:
 		print(word)
 		
-
 def parse_file():
 	os.chdir(DIR)
 	for root, dirs, files in os.walk("."):
@@ -39,8 +42,7 @@ def parse_file():
 				find_definition(toBeDefined, defined)
 
 def main(): 
-	parse_file()
-	pass     		
+	parse_file()    		
 
 if __name__ == '__main__':
 	sys.exit(main())
