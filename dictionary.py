@@ -4,17 +4,20 @@ import os
 
 DIR = "./tmp/collat_test/"
 
+
+'''		if  len(temp.split(" ")) > 1:   '''
 def find_definition(undefined, defined):
 	while undefined:
 		temp = undefined.pop()
-		if  len(temp.split(" ")) > 1:
+		if len(temp.split(" ")) > 1:
 			tempList = temp.split(" ")
-			print("THIS IS TEMP LIST:")
-			print(tempList)
-			for word in tempList: ''' of line '''
-				if word in defined: ''' then the words are defined.'''
-					defined.append(word)
-		print ("Has Been Defined: " + temp )
+			for word in tempList:
+				if any(word in s for s in defined):
+					print("THIS IS LIST")
+					print (tempList)
+					print(temp)
+					print ("Has Been Defined: " + temp )
+					defined.append(temp)
 		print(defined)
 	definedString = ''
 	for word in defined:
