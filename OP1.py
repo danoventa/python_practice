@@ -8,7 +8,8 @@ line = "I will now go to sleep and be AFK until lunch time tomorrow."
 #replacement = "Eyjafjallajokull"
 #line = "The eruption of the volcano EY in 2010 disrupted air travel in Europe for 6 days."
 
+start = line.find(marker)
+end = line.find(marker) + len(marker)
 
-
-replaced = 
+replaced = line[:start] + replacement + line[end:]
 
